@@ -11,7 +11,7 @@ def get_styles(input_file):
 
 
 def load_default_numbering():
-    with open("assets/default-numbering.xml", "rb") as f:
+    with open("../../../assets/default-numbering.xml", "rb") as f:
         return etree.fromstring(f.read())
 
 

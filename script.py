@@ -3,10 +3,10 @@ import zipfile
 
 from lxml import etree
 
-from docx_handler import save_docx, get_table_of_contents, get_document
-from style_utils import update_normal_style, update_heading_1_style, create_normal_no_indent_style, get_styles, \
-    create_heading_struct_style, get_numbering, create_head1_style
-from section_formatter import fix_sections, fix_struct_headings, fix_level1_headings, \
+from src.service.old.docx_handler import save_docx, get_table_of_contents, get_document
+from src.service.old.style_utils import update_normal_style, create_normal_no_indent_style, get_styles, \
+    create_heading_struct_style, create_head1_style
+from src.service.old.section_formatter import fix_sections, fix_struct_headings, fix_level1_headings, \
     get_head1_toc, get_head2_toc, get_main_headings, fix_main_sections
 
 
