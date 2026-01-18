@@ -17,7 +17,9 @@
       "Bash(.venv/bin/baml-cli generate:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(uv run python:*)",
+      "Bash(/Users/dronich/personal/goster-backend/.venv/bin/python:*)"
     ]
   }
 }

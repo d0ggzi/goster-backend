@@ -2,22 +2,15 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
-    POSTGRES_HOST: str = "localhost"
-    POSTGRES_PORT: int
-    POSTGRES_USER: str
-    POSTGRES_PASSWORD: str
-    POSTGRES_DB: str
+    DATABASE_URL: str = "mysql+aiomysql://root:password@localhost:3306/goster"
+    JWT_SECRET: str = "super-secret-key-change-in-production"
 
-    YANDEX_S3_ENDPOINT: str
-    YANDEX_S3_ACCESS_KEY: str
-    YANDEX_S3_SECRET_KEY: str
-    YANDEX_S3_BUCKET_NAME: str
-
-    @property
-    def DATABASE_URL_psycopg(self):
-        return f"postgresql+psycopg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+    S3_ENDPOINT: str = ""
+    S3_ACCESS_KEY: str = ""
+    S3_SECRET_KEY: str = ""
+    S3_BUCKET_NAME: str = "goster"
 
 
-settings = Settings()  # type: ignore[call-arg]
+settings = Settings()

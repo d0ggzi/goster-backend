@@ -1,9 +1,9 @@
 from fastapi import Depends
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.domain.base import get_session
-from src.service.old.old_processing_service import OldProcessingService
+from src.domain.base import get_async_session
+from src.service.processing_service import ProcessingService
 
 
-async def get_processing_service(session: Session = Depends(get_session)):
-    return OldProcessingService(session)
+async def get_processing_service(session: AsyncSession = Depends(get_async_session)):
+    return ProcessingService(session)
