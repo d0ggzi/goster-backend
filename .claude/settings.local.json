@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:blog.fenix.help)",
+      "WebSearch",
+      "WebFetch(domain:gnicpm.ru)",
+      "WebFetch(domain:research.hse.ru)",
+      "WebFetch(domain:ciu.nstu.ru)",
+      "WebFetch(domain:zaochnik.ru)",
+      "Bash(tree:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(uv sync:*)",
+      "Bash(.venv/bin/baml-cli generate:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
